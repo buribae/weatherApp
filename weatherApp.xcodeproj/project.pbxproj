@@ -14,6 +14,7 @@
 		2EF81F041DAFC47A005AAE92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EF81F021DAFC47A005AAE92 /* LaunchScreen.storyboard */; };
 		2EF81F0F1DAFC47A005AAE92 /* weatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF81F0E1DAFC47A005AAE92 /* weatherAppTests.swift */; };
 		2EF81F1A1DAFC47A005AAE92 /* weatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF81F191DAFC47A005AAE92 /* weatherAppUITests.swift */; };
+		2EF81F281DAFC7CA005AAE92 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF81F271DAFC7CA005AAE92 /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2EF81F151DAFC47A005AAE92 /* weatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF81F191DAFC47A005AAE92 /* weatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherAppUITests.swift; sourceTree = "<group>"; };
 		2EF81F1B1DAFC47A005AAE92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EF81F271DAFC7CA005AAE92 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		2EF81EF81DAFC47A005AAE92 /* weatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				2EF81F271DAFC7CA005AAE92 /* APIClient.swift */,
 				2EF81EF91DAFC47A005AAE92 /* AppDelegate.swift */,
 				2EF81EFB1DAFC47A005AAE92 /* ViewController.swift */,
 				2EF81EFD1DAFC47A005AAE92 /* Main.storyboard */,
@@ -264,6 +267,7 @@
 			files = (
 				2EF81EFC1DAFC47A005AAE92 /* ViewController.swift in Sources */,
 				2EF81EFA1DAFC47A005AAE92 /* AppDelegate.swift in Sources */,
+				2EF81F281DAFC7CA005AAE92 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
