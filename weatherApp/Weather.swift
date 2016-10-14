@@ -21,11 +21,13 @@ open class Weather: Model {
     open var humidity: String?
     open var wind_speed: String?
     open var pressure: String?
+    open var week: String?
     
-    public required init?(_ json: [String:Any]) {
+    public required init?(_ json:[String:Any] ) {
         guard let weather = json["weather"] as? Array<[String:Any]> else {return nil}
         guard let main = json["main"] as? [String:Any] else {return nil}
         guard let wind = json["wind"] as? [String:Any] else {return nil}
+        guard let dt = json["dt"] as? TimeInterval else {return nil}
         id = Model.stringify(weather[0]["id"])
         
         super.init(json)
@@ -35,8 +37,24 @@ open class Weather: Model {
             return nil
         }
         
+        let date = Date(timeIntervalSince1970: dt)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM dd"
+        self.dt = dateFormatter.string(from: date)
+        dateFormatter.dateStyle = .short
+        dateFormatter.doesRelativeDateFormatting = true
+        
+        switch dateFormatter.string(from: date) {
+            case "Today","Tomorrow":
+                self.week = dateFormatter.string(from: date)
+                break
+            default:
+                self.week = self.dayOfWeek(date: date)
+                break
+        }
+        
+        
         self.name = Model.stringify(json["name"])
-        self.dt = Model.stringify(json["dt"])
         self.main = Model.stringify(weather[0]["main"])
         self.desc = Model.stringify(weather[0]["description"])
         self.icon = Model.stringify(weather[0]["icon"])
@@ -48,8 +66,55 @@ open class Weather: Model {
         
     }
     
+    // API has different structure!
+    init?(_ json: [String:Any], isOther:Bool ){
+        guard let weather = json["weather"] as? Array<[String:Any]> else {return nil}
+        guard let temp = json["temp"] as? [String:Any] else {return nil}
+        guard let dt = json["dt"] as? TimeInterval else {return nil}
+        id = Model.stringify(weather[0]["id"])
+        super.init(json)
+        
+        // Check if id exists
+        if self.uniqueId.isEmpty {
+            return nil
+        }
+        
+        let date = Date(timeIntervalSince1970: dt)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM dd"
+        self.dt = dateFormatter.string(from: date)
+        dateFormatter.dateStyle = .short
+        dateFormatter.doesRelativeDateFormatting = true
+        
+        switch dateFormatter.string(from: date) {
+        case "Today","Tomorrow":
+            self.week = dateFormatter.string(from: date)
+            break
+        default:
+            self.week = self.dayOfWeek(date: date)
+            break
+        }
+        
+        
+        self.name = Model.stringify(json["name"])
+        self.main = Model.stringify(weather[0]["main"])
+        self.desc = Model.stringify(weather[0]["description"])
+        self.icon = Model.stringify(weather[0]["icon"])
+        self.humidity = Model.stringify(json["humidity"])
+        self.pressure = Model.stringify(json["pressure"])
+        self.temp_max = "\((Model.stringify(temp["max"]) as NSString).substring(to: 2))°"
+        self.temp_min = "\((Model.stringify(temp["min"]) as NSString).substring(to: 2))°"
+        self.wind_speed = Model.stringify(json["speed"])
+    }
+    
     override open var uniqueId: String {
         return id
+    }
+    
+    func dayOfWeek(date:Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        return dateFormatter.string(from: date)
     }
     
     

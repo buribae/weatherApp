@@ -19,6 +19,9 @@
 		2EF81F331DAFD355005AAE92 /* mainTodayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EF81F321DAFD355005AAE92 /* mainTodayTableViewCell.xib */; };
 		2EF81F351DB055E9005AAE92 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF81F341DB055E9005AAE92 /* Weather.swift */; };
 		2EF81F381DB0563F005AAE92 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF81F371DB0563F005AAE92 /* Model.swift */; };
+		2EF81F3A1DB06F37005AAE92 /* UIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF81F391DB06F37005AAE92 /* UIManager.swift */; };
+		2EF81F3D1DB07F8E005AAE92 /* mainOtherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF81F3C1DB07F8E005AAE92 /* mainOtherTableViewCell.swift */; };
+		2EF81F3F1DB07FF2005AAE92 /* mainOtherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EF81F3E1DB07FF2005AAE92 /* mainOtherTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		2EF81F321DAFD355005AAE92 /* mainTodayTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mainTodayTableViewCell.xib; sourceTree = "<group>"; };
 		2EF81F341DB055E9005AAE92 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		2EF81F371DB0563F005AAE92 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		2EF81F391DB06F37005AAE92 /* UIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIManager.swift; sourceTree = "<group>"; };
+		2EF81F3C1DB07F8E005AAE92 /* mainOtherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainOtherTableViewCell.swift; sourceTree = "<group>"; };
+		2EF81F3E1DB07FF2005AAE92 /* mainOtherTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mainOtherTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +113,9 @@
 		2EF81EF81DAFC47A005AAE92 /* weatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				2EF81F361DB055F0005AAE92 /* Model */,
 				2EF81EF91DAFC47A005AAE92 /* AppDelegate.swift */,
+				2EF81F3B1DB06F3E005AAE92 /* Manager */,
+				2EF81F361DB055F0005AAE92 /* Model */,
 				2EF81F2B1DAFD1DF005AAE92 /* Network */,
 				2EF81F2C1DAFD1E8005AAE92 /* ViewController */,
 				2EF81F2D1DAFD212005AAE92 /* Storyboard */,
@@ -168,6 +175,8 @@
 				2EF81F291DAFD1D3005AAE92 /* mainTableViewController.swift */,
 				2EF81F301DAFD339005AAE92 /* mainTodayTableViewCell.swift */,
 				2EF81F321DAFD355005AAE92 /* mainTodayTableViewCell.xib */,
+				2EF81F3C1DB07F8E005AAE92 /* mainOtherTableViewCell.swift */,
+				2EF81F3E1DB07FF2005AAE92 /* mainOtherTableViewCell.xib */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -186,6 +195,14 @@
 				2EF81F371DB0563F005AAE92 /* Model.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		2EF81F3B1DB06F3E005AAE92 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2EF81F391DB06F37005AAE92 /* UIManager.swift */,
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +317,7 @@
 			files = (
 				2EF81F331DAFD355005AAE92 /* mainTodayTableViewCell.xib in Resources */,
 				2EF81F041DAFC47A005AAE92 /* LaunchScreen.storyboard in Resources */,
+				2EF81F3F1DB07FF2005AAE92 /* mainOtherTableViewCell.xib in Resources */,
 				2EF81F011DAFC47A005AAE92 /* Assets.xcassets in Resources */,
 				2EF81EFF1DAFC47A005AAE92 /* Main.storyboard in Resources */,
 			);
@@ -327,6 +345,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EF81F311DAFD339005AAE92 /* mainTodayTableViewCell.swift in Sources */,
+				2EF81F3D1DB07F8E005AAE92 /* mainOtherTableViewCell.swift in Sources */,
+				2EF81F3A1DB06F37005AAE92 /* UIManager.swift in Sources */,
 				2EF81EFA1DAFC47A005AAE92 /* AppDelegate.swift in Sources */,
 				2EF81F281DAFC7CA005AAE92 /* APIClient.swift in Sources */,
 				2EF81F381DB0563F005AAE92 /* Model.swift in Sources */,

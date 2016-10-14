@@ -1,5 +1,5 @@
 //
-//  mainTodayTableViewCell.swift
+//  mainOtherTableViewCell.swift
 //  weatherApp
 //
 //  Created by StephenJang on 10/13/16.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class mainTodayTableViewCell: UITableViewCell {
+class mainOtherTableViewCell: UITableViewCell {
     
-    static let height: CGFloat = 265.0
+    static let height: CGFloat = 157.0
     let uiManager = UIManager.sharedInstance
     
     // ________________________________________
@@ -31,16 +31,16 @@ class mainTodayTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        guard let week = weather?.week, let dt = weather?.dt, let icon = weather?.icon else { return }
-        dateLabel.text = "\(week), \(dt)"
+        guard let week = weather?.week, let icon = weather?.icon else { return }
+        dateLabel.text = week
         tempMaxLabel.text = weather?.temp_max
         tempMinLabel.text = weather?.temp_min
         weatherLabel.text = weather?.main
         
-        weatherImageView.image = uiManager.getImageById(icon.substring(to:icon.index(before: icon.endIndex)) + "d")
+        weatherImageView.image = uiManager.getImageById(icon.substring(to:icon.index(before: icon.endIndex)) + "n")
     }
     
     class func reuseIdentifier() -> String{
-        return "mainTodayTableViewCell"
+        return "mainOtherTableViewCell"
     }
 }
