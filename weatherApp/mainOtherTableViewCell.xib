@@ -9,33 +9,33 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mainOtherTableViewCell" rowHeight="157" id="ZBO-Oe-4Q0" customClass="mainOtherTableViewCell" customModule="weatherApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="468" height="157"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mainOtherTableViewCell" rowHeight="70" id="ZBO-Oe-4Q0" customClass="mainOtherTableViewCell" customModule="weatherApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="468" height="70"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZBO-Oe-4Q0" id="ulR-tD-pCH">
-                <frame key="frameInset" width="468" height="156.5"/>
+                <frame key="frameInset" width="468" height="69"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomorrow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VT1-Dl-snK">
-                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6G-JF-BGj">
-                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejF-DI-o4a">
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KW2-Bg-Qpo">
                         <constraints>
-                            <constraint firstAttribute="height" constant="70" id="0uQ-ce-M82"/>
-                            <constraint firstAttribute="width" constant="70" id="l2C-ej-gAa"/>
+                            <constraint firstAttribute="height" constant="45" id="0uQ-ce-M82"/>
+                            <constraint firstAttribute="width" constant="45" id="l2C-ej-gAa"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Uz-Hv-VcB">
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -44,10 +44,10 @@
                     <constraint firstItem="V6G-JF-BGj" firstAttribute="top" secondItem="VT1-Dl-snK" secondAttribute="top" id="7AP-Ld-yix"/>
                     <constraint firstItem="KW2-Bg-Qpo" firstAttribute="leading" secondItem="ulR-tD-pCH" secondAttribute="leadingMargin" constant="9" id="CN5-JK-1od"/>
                     <constraint firstItem="KW2-Bg-Qpo" firstAttribute="centerY" secondItem="ulR-tD-pCH" secondAttribute="centerY" id="KXD-Ko-ED7"/>
-                    <constraint firstItem="ejF-DI-o4a" firstAttribute="top" secondItem="V6G-JF-BGj" secondAttribute="bottom" constant="10" id="Uo1-Ie-de3"/>
+                    <constraint firstItem="ejF-DI-o4a" firstAttribute="top" secondItem="V6G-JF-BGj" secondAttribute="bottom" constant="5" id="Uo1-Ie-de3"/>
                     <constraint firstAttribute="trailingMargin" secondItem="V6G-JF-BGj" secondAttribute="trailing" constant="30" id="We8-te-x0m"/>
-                    <constraint firstItem="9Uz-Hv-VcB" firstAttribute="top" secondItem="VT1-Dl-snK" secondAttribute="bottom" constant="10" id="WmC-CX-zBx"/>
-                    <constraint firstItem="VT1-Dl-snK" firstAttribute="top" secondItem="KW2-Bg-Qpo" secondAttribute="top" constant="-5" id="Yj6-tz-6tK"/>
+                    <constraint firstItem="9Uz-Hv-VcB" firstAttribute="top" secondItem="VT1-Dl-snK" secondAttribute="bottom" constant="5" id="WmC-CX-zBx"/>
+                    <constraint firstItem="VT1-Dl-snK" firstAttribute="top" secondItem="KW2-Bg-Qpo" secondAttribute="top" id="Yj6-tz-6tK"/>
                     <constraint firstItem="ejF-DI-o4a" firstAttribute="centerX" secondItem="V6G-JF-BGj" secondAttribute="centerX" id="ZIY-NI-JzQ"/>
                     <constraint firstItem="9Uz-Hv-VcB" firstAttribute="leading" secondItem="VT1-Dl-snK" secondAttribute="leading" id="ewi-5L-Qm3"/>
                     <constraint firstItem="VT1-Dl-snK" firstAttribute="leading" secondItem="KW2-Bg-Qpo" secondAttribute="trailing" constant="16" id="ihs-mm-uBG"/>
@@ -60,7 +60,7 @@
                 <outlet property="weatherImageView" destination="KW2-Bg-Qpo" id="its-JT-Wy8"/>
                 <outlet property="weatherLabel" destination="9Uz-Hv-VcB" id="aUq-Yx-KDC"/>
             </connections>
-            <point key="canvasLocation" x="8" y="105.5"/>
+            <point key="canvasLocation" x="8" y="55.5"/>
         </tableViewCell>
     </objects>
 </document>

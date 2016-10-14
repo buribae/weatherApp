@@ -10,7 +10,7 @@ import UIKit
 
 class mainOtherTableViewCell: UITableViewCell {
     
-    static let height: CGFloat = 157.0
+    static let height: CGFloat = 70.0
     let uiManager = UIManager.sharedInstance
     
     // ________________________________________

@@ -87,8 +87,14 @@ class mainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
         case Section.today.rawValue:
+            let weather = self.weather
+            let viewController = detailViewController.viewController(weather!)
+            self.navigationController?.pushViewController(viewController, animated: true)
             break
         case Section.other.rawValue:
+            let weather = self.otherWeathers[indexPath.row]
+            let viewController = detailViewController.viewController(weather)
+            self.navigationController?.pushViewController(viewController, animated: true)
             break
         default:
             break

@@ -62,7 +62,11 @@ open class Weather: Model {
         self.pressure = Model.stringify(main["pressure"])
         self.temp_max = "\((Model.stringify(main["temp_max"]) as NSString).substring(to: 2))°"
         self.temp_min = "\((Model.stringify(main["temp_min"]) as NSString).substring(to: 2))°"
-        self.wind_speed = Model.stringify(wind["speed"])
+        
+        // Parse wind degree
+        if let deg = wind["deg"] as? Double {
+            self.wind_speed = "\(Model.stringify(wind["speed"]))km/h \(degToCompass(num: deg))"
+        }
         
     }
     
@@ -105,10 +109,19 @@ open class Weather: Model {
         self.temp_max = "\((Model.stringify(temp["max"]) as NSString).substring(to: 2))°"
         self.temp_min = "\((Model.stringify(temp["min"]) as NSString).substring(to: 2))°"
         self.wind_speed = Model.stringify(json["speed"])
+        if let deg = json["deg"] as? Double {
+            self.wind_speed = "\(Model.stringify(json["speed"]))km/h \(degToCompass(num: deg))"
+        }
     }
     
     override open var uniqueId: String {
         return id
+    }
+    
+    func degToCompass(num:Double) -> String {
+        let val = Int(num / 22.5 + 0.5)
+        let arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"]
+        return arr[(val % 16)]
     }
     
     func dayOfWeek(date:Date) -> String {
